@@ -15,6 +15,10 @@ author :
   email : mr.exodia.tpodt@gmail.com
   github : mrexodia
   twitter : mrexodia
+  
+# pagination
+
+paginate: 5
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
