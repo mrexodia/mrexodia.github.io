@@ -3,18 +3,23 @@ layout: default
 title: mrexodia's blog
 ---
 
-<br><br><br>
+<!-- some spacing -->
+<br>
+<br>
+<br>
 
 <!-- This loops through the paginated posts -->
+<div class="posts">
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
-{% endfor %}
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <p class="author">
+      <span class="date">{{ post.date | date_to_string }}</span>
+    </p>
+    <div class="content">
+      {{ post.content }}
+    </div>
+  {% endfor %}
+</div>
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
