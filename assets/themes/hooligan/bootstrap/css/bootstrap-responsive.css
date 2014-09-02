@@ -219,6 +219,7 @@
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 724px;
+	max-width: 45rem;
   }
   .span12 {
     width: 724px;
