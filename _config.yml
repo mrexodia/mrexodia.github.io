@@ -18,6 +18,9 @@ author :
 # pagination
 paginate: 5
 
+#site description
+description: Blog about coding and reverse engineering.
+
 #github markdown
 kramdown:
   input: GFM
