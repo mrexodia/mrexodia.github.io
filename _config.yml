@@ -16,8 +16,11 @@ author :
   twitter : mrexodia
   
 # pagination
-
 paginate: 5
+
+#github markdown
+kramdown:
+  input: GFM
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
