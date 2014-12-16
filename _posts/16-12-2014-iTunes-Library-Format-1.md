@@ -64,7 +64,7 @@ while (!inflater.finished())
 
 After reading the [older file format from iTunes v1.x - v3.x](http://search.cpan.org/~bdfoy/Mac-iTunes/doc/file_format.pod) and the requiem source it is quite easy to create [a Grammar for the encrypted file format](https://gist.github.com/mrexodia/b21b429cdab57fa64e81):
 
-![Encrypted iTunes Library](http://cl.ly/image/1y0w0O2y2w1Z/Screen%20Shot%202014-12-16%20at%2021.21.18.png)
+![Encrypted iTunes Library](http://cl.ly/image/3K3F1V3s2y0b/Screen%20Shot%202014-12-16%20at%2021.21.18.png)
 
 ##Conclusion (for now)
 
