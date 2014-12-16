@@ -14,7 +14,7 @@ More than a month ago I posted about some code I had to write for a project, tod
 
 "Why reverse the iTunes Library format?" you might ask, well it all started with a university project. Basically we're developing an app for Android/iOS using [Xamarin](http://xamarin.com) and since Apple doesn't like Windows, it is **impossible** to create/compile/test iOS apps without having access to Mac OS X. I installed a [hackintosh distribution](http://hackintosh.zone) to start developing the app.
 
-One time, when I was browsing iTunes I saw I had 15 euros left on my account, so I decided to buy an eBook I saw about on TV. But Apple still hates Windows/Android/Whatever and after I spent my money I discovered it was impossible to read books bought in the iBooks store on a non-iDevice. I tried searching for some DRM removal tools, but there was only one and it didn't work (it's called [requiem](https://www.google.com/?#q=requiem+drm) by the way).
+One time, when I was browsing iTunes I saw I had 15 euros left on my account, so I decided to buy an eBook I saw on TV. But Apple still hates Windows/Android/Whatever and after I spent my money I discovered it was impossible to read books bought in the iBooks store on a non-iDevice. I tried searching for some DRM removal tools, but there was only one and it didn't work (it's called [requiem](https://www.google.com/?#q=requiem+drm) by the way).
 
 Since I like reversing I decided to take on FairPlay (Apple's DRM) in order to unlock the .epub file so I can read it on my Sony eReader.
 
@@ -68,7 +68,7 @@ After reading the [older file format from iTunes v1.x - v3.x](http://search.cpan
 
 ##Conclusion (for now)
 
-Hopefully this was an interesting read. Unfortunately I don't have enough time to post the full story, but there will be a next post soon (I hope). In the meantime, try modifying the requiem source to output a decrypted iTunes library of your own. This will be required for the next post. Another thing you might want to do it setting up Eclipse with the `Makefile` included in the requiem source. This will make dumping the decrypted library a lot easier.
+Hopefully this was an interesting start. Unfortunately I don't have enough time to post the full story, but there will be a next post soon (I hope). In the meantime, try modifying the requiem source to output a decrypted iTunes library of your own. This will be required for the next post. Another thing you might want to do it setting up Eclipse with the `Makefile` included in the requiem source. This will make dumping the decrypted library a lot easier.
 
 Till next time,
 
