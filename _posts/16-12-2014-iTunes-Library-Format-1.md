@@ -6,8 +6,6 @@ tags : [binary, drm, iTunes, library, file, format, itl, aes, zlib]
 ---
 {% include JB/setup %}
 
-**DISCLAIMER**: The information presented in this blogpost is purely for educational and interoperability purposes and should not be used to commit any sort of crime.
-
 Hello everyone,
 
 More than a month ago I posted about some code I had to write for a project, today it will be about exploring the iTunes Library file format.
