@@ -18,7 +18,7 @@ Before you start reading this post, I recommend you read up on [Creating a Basic
 
 Technically the debug loop is part of [TitanEngine](https://bitbucket.org/mrexodia/titanengine-update), not of x64_dbg. The design of the debug loop, however is **very important** for x64_dbg in general, so I will explain it here anyway.
 
-A basic debug loop looks like this (sorry for the white background):
+A basic debug loop looks like this:
 
 ![debug loop](/images/x64_dbg_debug_loop.png)
 
