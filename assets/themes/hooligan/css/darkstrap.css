@@ -315,6 +315,10 @@ legend {
   border-color: #666;
 }
 
+.pagination em {
+  border-color: #666;
+}
+
 /* line 219, ../sass/darkstrap.scss */
 .pager a {
   background-color: #2f2f2f;
