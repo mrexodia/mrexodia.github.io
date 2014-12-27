@@ -14,7 +14,7 @@ In the previous post I discussed the structure of the encrypted file and there s
 
 ## The base structure
 
-Every `.itl` file starts with an `hdfm` information header. The approximate format of this header block is documented the [older file format from iTunes v1.x - v3.x](http://search.cpan.org/~bdfoy/Mac-iTunes/doc/file_format.pod). Basically after this everything is the same as in the older file format, except the header 'names'. The `hdsm` now is reversed to `msdh`. The whole file is basically build of `msdh` blocks with variables sizes.
+Every `.itl` file starts with an `hdfm` information header. The approximate format of this header block is documented the [older file format from iTunes v1.x - v3.x](http://search.cpan.org/~bdfoy/Mac-iTunes/doc/file_format.pod). Basically after this everything is the same as in the older file format, except the header 'names'. The `hdsm` now is reversed to `msdh`. The whole file is basically build of `msdh` blocks with variable sizes.
 
 Here is a small screenshot that shows the header and the `msdh` blocks:
 
@@ -22,28 +22,28 @@ Here is a small screenshot that shows the header and the `msdh` blocks:
 
 ## Structure of the 'msdh' blocks
 
-The `msdh` blocks contain the `headerLength`, `totalLength` and `blockType` as most important fields. After the `msdh` header, there is `blockData` that can contain various other types of structures. These structures very often look like this:
+The `msdh` blocks contain the `headerLength`, `totalLength` and `blockType` as most important fields. After the `msdh` header, there is `blockData` that can contain various other types of structures. These structures very often look similar to this C-style structure:
 
 ```
-struct mlrh
+typedef struct
 {
-    char signature[4]; //"mlrh"
-    int headerLength; //total length of the header
-    char unknown[headerLength - 8]; //some data
-}
+    char signature[4]; //"mlrh" as signature identification.
+    int headerLength; //total length of the header.
+    char unknown[headerLength - 8]; //structure-specific data.
+} mlrh;
 ```
 
-A screenshot of the grammar:
+A screenshot of how such a grammar looks:
 
 ![basic block structure](/images/itl_basic_block_data.png)
 
 ## Content of the 'msdh' blocks
 
-The `blockType` field of the `msdh` block says something about the content of the block. The value `4` for example has `blockData` that contains a path to the music library (`/Users/xxxxxx/Music/iTunes/iTunes%20Media` in my case). `blockData` can also contain other blocks. The `miah` and `mith` blocks for example both contain `mhoh` blocks. `mhoh` blocks are some kind of general-purpose block that can contain a lot of things.
+The `blockType` field of the `msdh` block says something about the contents of the block. The value `4` for example has `blockData` that contains a path to the music library, `/Users/xxxxxx/Music/iTunes/iTunes%20Media` in my case. `blockData` can also contain other blocks. The `miah` and `mith` blocks for example both contain `mhoh` blocks. `mhoh` blocks are some kind of general-purpose block that can contain a lot of things.
 
 ## Conclusion
 
-The basic file format was all I needed to continue fixing requiem, so this it all for now. Maybe I will blog about my progress another time. You can find the grammar [here](https://gist.github.com/mrexodia/0e0ddec9460e6aaca43f), feel free to expand on it and don't forget to send me the latest version :)
+The basic file format was all I needed to continue fixing requiem, so this it all for now. Maybe I will blog more about my progress later. You can find the grammar [here](https://gist.github.com/mrexodia/0e0ddec9460e6aaca43f), feel free to expand on it and don't forget to send me the latest version if you do ;)
 
 Merry Christmas,
 
