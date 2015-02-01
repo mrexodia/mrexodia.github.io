@@ -14,4 +14,5 @@ group: navigation
 - [tr4ceflow](http://blog.tr4ceflow.com)
 - [jvoisin](http://dustri.org)
 - [radare](http://radare.org)
-- [Reverse Engineering Tips](http://reverseengineeringtips.blogspot.com/)
+- [Reverse Engineering Tips](http://reverseengineeringtips.blogspot.com)
+- [Coding and other geeky stuff](http://blog.steffenl.com)
