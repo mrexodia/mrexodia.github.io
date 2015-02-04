@@ -16,3 +16,4 @@ group: navigation
 - [radare](http://radare.org)
 - [Reverse Engineering Tips](http://reverseengineeringtips.blogspot.com)
 - [Coding and other geeky stuff](http://blog.steffenl.com)
+- [Life In Hex](http://lifeinhex.com)
