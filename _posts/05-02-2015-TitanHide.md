@@ -58,16 +58,44 @@ An exported function called `KeAddSystemServiceTable` has a reference to the RVA
 000000014050EA64 48 03 C8                   add rcx, rax
 000000014050EA67 48 83 39 00                cmp qword ptr [rcx], 0
 */
-unsigned int rvaSSDT = 0;
+int rvaSSDT = 0;
 for (unsigned int i = 0; i < function_size; i++)
 {
     if (((*(unsigned int*)(function + i)) & 0x00FFFFF0) == 0xBC8340 && //4?83bc??
         !*(unsigned char*)(function + i + 8)) //???????? 00 
     { //cmp qword ptr [r?+r?+????????h], 0
-        rvaSSDT = *(unsigned int*)(function + i + 4);
+        rvaSSDT = *(int*)(function + i + 4);
         break;
     }
 }
+SSDT = (SSDTStruct*)((ULONG_PTR)GetKernelBase() + rvaSSDT);
+```
+
+Locating the SSDT on Windows 10 Technical Preview is a little trickier, but still possible:
+
+```
+/*
+Windows 10 Technical Preview:
+fffff800e21b30ec 757f             jne nt!KeAddSystemServiceTable+0x91 (fffff800e21b316d)
+fffff800e21b30ee 48833deafee4ff00 cmp qword ptr [nt!KeServiceDescriptorTable+0x20 (fffff800e2002fe0)],0 <- we are looking for this instruction
+fffff800e21b30f6 7575             jne nt!KeAddSystemServiceTable+0x91 (fffff800e21b316d)
+fffff800e21b30f8 48833da0fee4ff00 cmp qword ptr [nt!KeServiceDescriptorTableShadow+0x20 (fffff800e2002fa0)],0
+fffff800e21b3100 756b             jne nt!KeAddSystemServiceTable+0x91 (fffff800e21b316d)
+*/
+int rvaFound = -1;
+int rvaSSDT = 0;
+for (unsigned int i = 0; i < function_size; i++)
+{
+    if (((*(unsigned int*)(function + i)) & 0x00FFFFFF) == 0x3D8348 && //48833d
+        !*(unsigned char*)(function + i + 7)) //???????? 00
+    { //cmp qword ptr [?],0
+        rvaFound = i;
+        rvaSSDT = *(int*)(function + i + 3);
+        break;
+    }
+}
+//Calculate the actual address (rvaSSDT is a RIP-relative offset)
+SSDT = (SSDTStruct*)((ULONG_PTR)KeASST + rvaFound + rvaSSDT + 8 - 0x20);
 ```
 
 #### Hooking the SSDT on x64
