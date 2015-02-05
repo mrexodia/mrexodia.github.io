@@ -43,7 +43,7 @@ On x32 versions of the operating system the SSDT structure is exported under the
 
 On x64 versions of the operating system SSDT hooking becomes much harder. There are two reasons for this. The first reason is that the SSDT is no longer exported by `ntoskrnl.exe`, which means TitanHide must use different ways to find the SSDT. The other reason is that the SSDT no longer uses direct pointers, but offsets relative to the start of the SSDT. This means our hooks cannot be located too far from the `ntoskrnl` memory region.
 
-#### Locating the SSDT on x64
+### Locating the SSDT on x64
 
 After lots of searching around I found someone who discovered a semi-reliable way of locating the SSDT on x64 (I tested this method on Windows XP x64 - Windows 8.1 x64 with success). Read the original post [here](https://code.google.com/p/volatility/issues/detail?id=189#c2). For the purpose of this post I will line out the basics here, supported with some code.
 
@@ -98,7 +98,7 @@ for (unsigned int i = 0; i < function_size; i++)
 SSDT = (SSDTStruct*)((ULONG_PTR)KeASST + rvaFound + rvaSSDT + 8 - 0x20);
 ```
 
-#### Hooking the SSDT on x64
+### Hooking the SSDT on x64
 
 In order to make sure the new function pointers 'fit' into the SSDT, I created a function called `FindCaveAddress`. That looks for compiler-generated padding, usually found around functions. It searched for a certain number of padding bytes and when found, a hook stub like this is inserted:
 
