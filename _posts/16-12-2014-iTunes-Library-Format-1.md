@@ -10,7 +10,7 @@ Hello everyone,
 
 More than a month ago I posted about some code I had to write for a project, today it will be about exploring the iTunes Library file format.
 
-##Background
+## Background
 
 "Why reverse the iTunes Library format?" you might ask, well it all started with a university project. Basically we're developing an app for Android/iOS using [Xamarin](http://xamarin.com) and since Apple doesn't like Windows, it is **impossible** to create/compile/test iOS apps without having access to Mac OS X. I installed a [hackintosh distribution](http://hackintosh.zone) to start developing the app.
 
@@ -20,11 +20,11 @@ Since I like reversing I decided to take on FairPlay (Apple's DRM) in order to u
 
 In the process of checking out the [old sources](https://www.google.nl/?#q=requiem-3.3.6-src.zip) I discovered that the iTunes Library was read and decrypted, but after that the file format did not match the code anymore. Since the code was made for iTunes v10.x, not v12.x I had to figure out the new library file format.
 
-##The past
+## The past
 
 In the past people tried to reverse the iTunes Library file format, the more notable document is [this one](http://search.cpan.org/~bdfoy/Mac-iTunes/doc/file_format.pod). It's for iTunes v1.x - v3.x, but it was still useful for me now. Another resource is the previously mentioned [requiem source code](https://www.google.nl/?#q=requiem-3.3.6-src.zip).
 
-##Getting started
+## Getting started
 
 Before we get started I'd like to introduce a very good tool called [Synalyze It! Pro](https://www.synalysis.net). Basically it's a hex editor, but it's main feature (for us at least) is the 'Grammars' option. Grammers are XML files that describe data structures and when a structure matches with a file, you can see the structure contents and highlight/manipulate the bytes they are mapped to. Reading the documentation is recommended before you continue.
 
@@ -32,7 +32,7 @@ It might also be useful to note I'm doing everything on Mac OS X (probably iTune
 
 Now copy the iTunes Library file called `iTunes Library.itl` from `~/Music/iTunes/` to your documents folder or something and open it up in Synalyze It to start working with it.
 
-##Encryption + ZLIB
+## Encryption + ZLIB
 
 In the requiem source code, you can see in `ModifyLib.loadLibrary()` that the iTunes file from v10.x used `AES/ECB/NoPadding` with the key `BHUILuilfghuila3`:
 
@@ -66,7 +66,7 @@ After reading the [older file format from iTunes v1.x - v3.x](http://search.cpan
 
 ![Encrypted iTunes Library](/images/itunes_1_screenshot.png)
 
-##Conclusion (for now)
+## Conclusion (for now)
 
 Hopefully this was an interesting start. Unfortunately I don't have enough time to post the full story, but there will be a next post soon (I hope). In the meantime, try modifying the requiem source to output a decrypted iTunes library of your own. This will be required for the next post. Another thing you might want to do it setting up Eclipse with the `Makefile` included in the requiem source. This will make dumping the decrypted library a lot easier.
 
