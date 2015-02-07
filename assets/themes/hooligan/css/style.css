@@ -409,3 +409,15 @@ div.sidebar section img.icon {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
+.comments-link {
+  background-image: url(../images/comment.png);
+  background-repeat: no-repeat;
+  padding-left: 22px;
+  display: block;
+}
+.user-link {
+  background-image: url(../images/user.png);
+  background-repeat: no-repeat;
+  padding-left: 22px;
+  display: block;
+}
