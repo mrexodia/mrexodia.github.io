@@ -9,7 +9,7 @@ layout: default
 <div class="posts">
 {% for post in paginator.posts %}
 	{% if post != site.posts.first %}
-	<br>
+	<hr>
 	{% endif %}
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
     <p class="author">
@@ -19,7 +19,6 @@ layout: default
       {{ post.content }}
     </div>
 	<span class="comments-link"><a href="{{ post.url }}/#comments">Comments</a></span>
-	<hr>
   {% endfor %}
 </div>
 
