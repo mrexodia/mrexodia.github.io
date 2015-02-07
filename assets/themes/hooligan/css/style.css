@@ -412,12 +412,6 @@ div.sidebar section img.icon {
 .comments-link {
   background-image: url(../images/comment.png);
   background-repeat: no-repeat;
-  padding-left: 22px;
-  display: block;
-}
-.user-link {
-  background-image: url(../images/user.png);
-  background-repeat: no-repeat;
-  padding-left: 22px;
+  padding-left: 25px;
   display: block;
 }
