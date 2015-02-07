@@ -134,3 +134,7 @@ That's right, only one line of code to do any SSDT hook you want!
 ## Conclusion
 
 I hope you found this blogpost interesting, if you have any remarks, feel free to post them in the comments or send them to me.
+
+Enjoy,
+
+Mr. eXoDia
