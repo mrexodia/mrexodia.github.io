@@ -19,6 +19,7 @@ layout: default
       {{ post.content }}
     </div>
 	<span class="comments-link"><a href="{{ post.url }}/#comments">Leave a comment</a></span>
+	<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.author.twitter }}&related={{ site.author.twitter }}" rel="nofollow" target="_blank" title="Share on Twitter" class="zocial twitter icon" target="_blank"></a>
   {% endfor %}
 </div>
 
