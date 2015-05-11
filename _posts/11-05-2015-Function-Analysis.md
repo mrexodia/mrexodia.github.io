@@ -38,7 +38,7 @@ Usually I like what the cool kids on the block do, but I saw some problems:
 
 Now computer scientists appear to like complexity analysis of an algorithm. Probably you cannot do better than linear anyway, so I decided that I wanted to algorithm to be done in linear time `O(n)`.
 
-The idea I had was very simple, but it requires to assumptions to work:
+The idea I had was very simple, but it requires two assumptions to work:
 
 1. Every call destination or immediate pointing inside the memory block given for analysis is assumed to be the start of a function;
 2. A function ends at or after the start of that function and cannot overlap with other functions.
