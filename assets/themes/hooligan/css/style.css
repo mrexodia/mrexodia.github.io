@@ -224,6 +224,7 @@ a.btn.disabled, a.btn.disabled.disabled {
   margin: 0;
   padding: 5px 0;
   overflow: hidden;
+  width: 60%;
 }
 /* line 202, ../_sass/_base.scss */
 .tag_box.inline li {
