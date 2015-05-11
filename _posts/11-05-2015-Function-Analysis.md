@@ -85,10 +85,10 @@ The actual method I used to find the end of a function is a variation of #1. Thi
 
 For the understanding of the algorithm I visualized it using x64dbg. These are the colors used to indicate the various variables:
 
-- <span style="background: #000000; color: #ffffff;">addr</b>
-- <span style="background: #ff0000; color: #000000;">end</b>
-- <span style="background: #00ff00; color: #000000;">fardest</b>
-- <span style="background: #00ffff; color: #000000;">jumpback</b>
+- <span style="background: #000000; color: #ffffff;">addr</span>
+- <span style="background: #ff0000; color: #000000;">end</span>
+- <span style="background: #00ff00; color: #000000;">fardest</span>
+- <span style="background: #00ffff; color: #000000;">jumpback</span>
 
 The first animation shows how `fardest` is used. When a `ret` instruction is encountered it is considered to be the function end if `fardest` has no value or points **before** the current `ret` instruction. When `fardest` points after the `ret` instruction, the algorithm will continue instead looking for another `ret`:
 
