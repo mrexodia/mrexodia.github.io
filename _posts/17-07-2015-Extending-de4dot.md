@@ -36,7 +36,11 @@ Now before I go into this, I have to say that you are **obligated** by the licen
 
 Now to share the deobfuscator, for example for [internal company usage](http://www.gnu.org/licenses/gpl-faq.en.html#UnreleasedMods) or simply because you want to share prebuilt binaries of your GPL extension, simply copy the `bin/deobfuscator.OrangeHeap.dll` to the de4dot `bin` directory on another machine. Here is a screenshot that shows what happens before and after I added the DLL to the `bin` directory (obviously without any other modifications to de4dot):
 
-![extensibility!](/images/de4dot_orangeheap_.png)
+![extensibility!](/images/de4dot_orangeheap.png)
+
+## Overriding/Extending existing deobfuscators
+
+If you want to change the behavior of an existing deobfuscator, simply make the `DeobfuscatorInfo.Type` field return an already-present typename (like `co` for CryptoDeobfuscator or `df` for Dotfuscator). Basically you have to rip the current deobfuscator class out in a separate project (I tested this). See [here](https://github.com/mrexodia/de4dot/blob/master/de4dot.code/deobfuscators/Dotfuscator/Deobfuscator.cs) for a starting point. It should be pretty straightforward.
 
 Well, that's all for today. Hopefully till next time!
 
