@@ -10,7 +10,7 @@ Hey, what's up everybody?
 
 About two months ago I came across a modified version of [de4dot](http://de4dot.com) someone made, which required me to replace my current de4dot version in it's entirety. I did not like this and therefore I decided to work on extension support for de4dot. Basically it allows you to add new deobfuscator modules or **replace** the existing (sometimes outdated) ones, in a dynamic way.
 
-In this blogpost I will explain to you how to add a simple deobfuscator for [OrangeHeap](http://orangeheap.blogspot.com). The actual deobfuscator code is not written by me, but by [TheProxy](https://theproxyre.wordpress.com/2015/05/14/adding-obfuscator-to-de4dot/). It only serves as an example of how de4dot can be extended :)
+In this blogpost I will explain to you how to add a simple deobfuscator for [OrangeHeap](http://orangeheap.blogspot.com). The actual deobfuscator code is not written by me, but by [TheProxy](https://theproxyre.wordpress.com). It only serves as an example of how de4dot can be extended :)
 
 ## Getting started
 
@@ -28,7 +28,7 @@ In this post I won't go too much in depth about the internal de4dot architecture
 
 The identifying class for a deobfuscator is the `DeobfuscatorInfo` class. It has to provide a `Name` and a `Type` string field, where the `Type` field must be unique. It also has a `CreateDeobfuscator` method that will handle the actual deobfuscation.
 
-You can find the full code over [here](https://github.com/mrexodia/de4dot/tree/OrangeHeap) (again thanks to TheProxy for his code).
+You can find the full code over [here](https://github.com/mrexodia/de4dot/tree/OrangeHeap). TheProxy wrote a full tutorial with details over at [his blog](https://theproxyre.wordpress.com/2015/05/14/adding-obfuscator-to-de4dot)
 
 ## Sharing the deobfuscator
 
