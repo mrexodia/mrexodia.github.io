@@ -10,7 +10,7 @@ Hey, what's up everybody?
 
 About two months ago I came across a modified version of [de4dot](http://de4dot.com) someone made, which required me to replace my current de4dot version in it's entirety. I did not like this and therefore I decided to work on extension support for de4dot. Basically it allows you to add new deobfuscator modules or **replace** the existing (sometimes outdated) ones, in a dynamic way.
 
-In this blogpost I will explain to you how to add a simple deobfuscator for [OrangeHeap](http://orangeheap.blogspot.com). The actual deobfuscator code is not written by me, but by someone called [TheProxy](https://forum.tuts4you.com/topic/37122-de4dot-cryptophoenixreactororangeheap-fixed-by-ivancitooz/?p=174475). It only serves as an example of how de4dot can be extended :)
+In this blogpost I will explain to you how to add a simple deobfuscator for [OrangeHeap](http://orangeheap.blogspot.com). The actual deobfuscator code is not written by me, but by [TheProxy](https://theproxyre.wordpress.com/2015/05/14/adding-obfuscator-to-de4dot/). It only serves as an example of how de4dot can be extended :)
 
 ## Getting started
 
