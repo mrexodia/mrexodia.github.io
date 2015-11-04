@@ -45,7 +45,7 @@ When an `InitDebug` command is encountered (see [help](http://help.x64dbg.com)),
 
 ## Syncing the threads
 
-The `Debug Thread` has to wait in custom handlers until the user tells it to continue (by pressing the run button in the GUI). This is done by a very simple locking system that has three main functions: `lock()`, `unlock()` and `wait()`. The `wait()` function simply waits while the lock is locked and it works across threads, so when the `Debug Thread` is waiting and the `Command Thread` calls `unlock()`, the `Debug Thread` will continue execution. You can find all this code [here](https://bitbucket.org/mrexodia/x64_dbg/src/master/x64_dbg_dbg/threading.cpp).
+The `Debug Thread` has to wait in custom handlers until the user tells it to continue (by pressing the run button in the GUI). This is done by a very simple locking system that has three main functions: `lock()`, `unlock()` and `wait()`. The `wait()` function simply waits while the lock is locked and it works across threads, so when the `Debug Thread` is waiting and the `Command Thread` calls `unlock()`, the `Debug Thread` will continue execution. You can find all this code [here](https://github.com/x64dbg/x64dbg/blob/master/x64_dbg_dbg/threading.cpp).
 
 To provide thread-safe access to certain global variables (like breakpoint/comment/bookmark lists), x64_dbg uses a class called `CriticalSectionLocker`. This class can be found in the same file as locking system above.
 
