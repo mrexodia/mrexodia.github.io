@@ -18,3 +18,4 @@ group: navigation
 - [Coding and other geeky stuff](http://blog.steffenl.com)
 - [Life In Hex](http://lifeinhex.com)
 - [d3vil401](http://d3vsite.org)
+- [Samvartaka](https://samvartaka.github.io)
