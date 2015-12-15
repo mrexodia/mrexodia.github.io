@@ -1,0 +1,117 @@
+[Project]
+Assembler=masm
+Type=Win32 App
+Description=Key Gen for crackme1
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+[Files]
+1=KeyGen1.Asm
+2=KeyGen1.Inc
+3=KeyGen1.Rc
+4=KeyGen1.dlg
+5=KeyGen1.mnu
+[MakeFiles]
+0=KeyGen1.rap
+1=KeyGen1.rc
+2=KeyGen1.asm
+3=KeyGen1.obj
+4=KeyGen1.res
+5=KeyGen1.exe
+6=KeyGen1.def
+7=KeyGen1.dll
+8=KeyGen1.txt
+9=KeyGen1.lib
+10=KeyGen1.mak
+11=KeyGen1.hla
+12=KeyGen1.com
+[MakeDef]
+Menu=1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0
+1=4,O,$B\RC.EXE /v,1
+2=3,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",2
+3=5,O,$B\LINK.EXE /SUBSYSTEM:WINDOWS /RELEASE /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+6=*.obj,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",*.asm
+7=0,0,"$E\x32dbg",5
+11=4,O,$B\RC.EXE /v,1
+12=3,O,$B\ML.EXE /c /coff /Cp /Zi /nologo /I"$I",2
+13=5,O,$B\LINK.EXE /SUBSYSTEM:WINDOWS /DEBUG /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+16=*.obj,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",*.asm
+17=0,0,"$E\OllyDbg",5
+[Resource]
+[StringTable]
+[VerInf]
+[Group]
+Group=Added files,Assembly,Resources,Misc,Modules
+1=2
+2=2
+3=3
+4=3
+5=3
+[Size]
+4=0,0,0,0
+1=0,0,0,0,2782
+2=0,0,0,0,437
+3=0,0,0,0,0
+[VersionControl]
+Settings=1246
+Milestones=129
+MilestoneEvery=10
+MilestoneEveryCurrent=0
+MilestoneOnBuild=0.0.0.0
+MilestoneOnTime=2
+MilestoneOnDate=0
+MilestoneOnDateWhen=1
+MilestoneOnDateStatus=0
+MilestoneOnDateDate=13
+MilestoneOnDateTimeYear=2015
+MilestoneOnDateTimeMonth=12
+MilestoneOnDateTimeDate=12
+MilestoneOnDateTimeHour=14
+MilestoneOnDateTimeMin=59
+MilestoneOnDateTimeSec=32
+MilestoneOnDateTimeStatus=0
+BackupLocation=C:\RadAsm\Masm\Projects\VCBackups\
+CompressionLevel=0
+DefaultComment=Project $N, $Z, Backup Created On $D At $T.
+ExcludeExt1=\
+ExcludeExt2=\
+ExcludeExt3=\
+ExcludeExt4=\
+FileVerLength=4
+FileVer2Range=0
+FileVer3Range=0
+FileVer4Range=0
+ProductVerLength=4
+ProductVer2Range=0
+ProductVer3Range=0
+ProductVer4Range=0
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[Collapse]
+1=
+2=
+3=
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=
