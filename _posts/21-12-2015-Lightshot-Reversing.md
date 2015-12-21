@@ -89,4 +89,6 @@ Then put `index.php` in a directory called `v1` and start your Apache server. If
 
 That's all for now, I hope you enjoyed this post!
 
+Oh, quick update. This also works on the OS X version of Lightshot, however there you need to reboot in order to make the `/private/etc/hosts` file change work.
+
 Mr. eXoDia
