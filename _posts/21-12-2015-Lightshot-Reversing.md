@@ -56,7 +56,7 @@ Date: Mon, 21 Dec 2015 17:51:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: __cfduid=d1a81c603fd50b8f9fbd992716bd5ce0f1450720314; expires=Tue, 20-Dec-16 17:51:54 GMT; path=/; domain=.prntscr.com; HttpOnly
+Set-Cookie: __cfduid=d1a123603fd50b8f9fb5992716bd5cb0f1450720314; expires=Tue, 20-Dec-16 17:51:54 GMT; path=/; domain=.prntscr.com; HttpOnly
 X-Powered-By: PHP/5.5.9-1ubuntu4.14
 CF-RAY: 2585700ef8880767-AMS
 
