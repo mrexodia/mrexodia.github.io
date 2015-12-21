@@ -77,11 +77,13 @@ The code is very simple, you can get it from [here](https://gist.github.com/mrex
 
 Their API uses chunked transfer encoding, but CURL eats a raw response just as well.
 
-After putting this line in `C:\Windows\system32\drivers\etc\hosts` and putting the `index.php` file in `v1` everything appears to be working:
+Put this line in `C:\Windows\system32\drivers\etc\hosts`:
 
 ```
 127.0.0.1 api.prntscr.com
 ```
+
+Then put `index.php` in a directory called `v1` and start your Apache server. If everything went okay, the upload window should look like this:
 
 ![final result](/images/lightshot3.png)
 
