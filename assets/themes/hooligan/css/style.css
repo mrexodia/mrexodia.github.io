@@ -1,5 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro);
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@font-face {
+    font-family: "Avenir Next";
+    src: url(../fonts/AvenirNext-Regular.ttf);
+    font-weight: normal;
+}
+/*@font-face {
+    font-family: "Avenir Next";
+    src: url(../fonts/AvenirNext-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Avenir Next";
+    src: url(../fonts/AvenirNext-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: "Avenir Next";
+    src: url(../fonts/AvenirNext-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}*/
 /* Partials */
 /* Theme Vars */
 /* Compass Vars */
@@ -15,8 +34,7 @@ body {
   color: #bbb;
   text-shadow: 1px 1px 1px #000;
   height: 100%;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 14px;
+  font: 100%/1.5 "Avenir Next";
 }
 
 /* line 26, ../_sass/_base.scss */
@@ -25,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   color: #999;
   text-rendering: optimizelegibility;
-  font-family: 'Advent Pro', sans-serif;
+  /*font-family: 'Advent Pro', sans-serif;*/
   /*font-family: 'Pontano Sans', sans-serif;*/
 }
 
