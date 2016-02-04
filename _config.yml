@@ -20,7 +20,7 @@ author :
 paginate: 5
 
 #site description
-description: Blog about coding and reverse engineering.
+description: Blog dedicated to (x64dbg) programming, reverse engineering and general hacking.
 
 #github markdown
 kramdown:
