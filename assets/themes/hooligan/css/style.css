@@ -1,24 +1,4 @@
-@font-face {
-    font-family: "Avenir Next";
-    src: url(../fonts/AvenirNext-Regular.ttf);
-    font-weight: normal;
-}
-/*@font-face {
-    font-family: "Avenir Next";
-    src: url(../fonts/AvenirNext-Bold.ttf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: "Avenir Next";
-    src: url(../fonts/AvenirNext-Italic.ttf);
-    font-style: italic;
-}
-@font-face {
-    font-family: "Avenir Next";
-    src: url(../fonts/AvenirNext-BoldItalic.ttf);
-    font-weight: bold;
-    font-style: italic;
-}*/
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
 /* Partials */
 /* Theme Vars */
 /* Compass Vars */
@@ -34,7 +14,7 @@ body {
   color: #bbb;
   text-shadow: 1px 1px 1px #000;
   height: 100%;
-  font: 100%/1.5 "Avenir Next";
+  font: 100%/1.5 "Avenir Next","Avenir",Oxygen,"Helvetica Neue",Arial,sans-serif;
 }
 
 /* line 26, ../_sass/_base.scss */
