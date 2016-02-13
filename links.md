@@ -20,3 +20,4 @@ group: navigation
 - [d3vil401](http://d3vsite.org)
 - [Samvartaka](https://samvartaka.github.io)
 - [Dan Staples](https://disman.tl/2015/03/16/cross-architecture-reflective-dll-inection.html)
+- [Reverse Engineering](http://compile-tips.blogspot.nl)
