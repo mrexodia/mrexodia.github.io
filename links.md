@@ -6,7 +6,7 @@ group: navigation
 ---
 {% include JB/setup %}
 
-- [x64_dbg](http://x64dbg.com)
+- [x64dbg](http://x64dbg.com)
 - [My BitBucket](https://bitbucket.org/mrexodia)
 - [Tuts4You](https://tuts4you.com)
 - [EXETools](http://forum.exetools.com)
