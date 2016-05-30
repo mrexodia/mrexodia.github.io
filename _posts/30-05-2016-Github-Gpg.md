@@ -8,13 +8,13 @@ tags : [git, gpg, git extensions, configuration, tutorial, guide, windows]
 
 Hello everyone,
 
-Today I saw [this broadcast](https://github.com/blog/2144-gpg-signature-verification) on [Github](https://github.com) which states that GPG signature verification was added to Github. It took me a bit of searching before I got it to work from both the command line and [Git Extensions](https://gitextensions.github.io) so this will be a guide explaining how I did it.
+Today I saw [this broadcast](https://github.com/blog/2144-gpg-signature-verification) on [Github](https://github.com) which states that GPG signature verification was added to Github. It took me a bit of searching before I got it to work from both the command line and [Git Extensions](https://gitextensions.github.io) so in this guide I will explain how I did it.
 
 ## Installing Git (Extensions)
 
 The first thing to install is the latest (v2.0.0+) version of [Git for Windows](https://git-for-windows.github.io).
 
-After will have to install [Git Extensions](https://github.com/gitextensions/gitextensions/releases). Make sure to select the `-SetupComplete` but **do not** install MsysGit from there since you already installed a new version.
+After will have to install [Git Extensions](https://github.com/gitextensions/gitextensions/releases). Make sure to select the `-SetupComplete` but **do not** install MsysGit from there since you already installed a newer version.
 
 Make sure you configure Git (Extensions) correctly so your identity is in sync with your Github email/username.
 
@@ -42,6 +42,8 @@ Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
 Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
 ```
+
+If you get any errors, make sure you added everything to your `PATH` environment variable.
 
 ## Generating GPG Keys
 
@@ -119,6 +121,11 @@ To make Git work with GPG you should run the following commands:
 ```
 git config --global gpg.program "C:/Program Files (x86)/GNU/GnuPG/gpg2.exe"
 git config --global user.signingkey 6B84CA35
+```
+
+These commands enable automatic GPG signing for commits and tags (which is required if you want this to work with Git Extensions):
+
+```
 git config --global commit.gpgsign true
 git config --global tag.gpgsign true
 ```
@@ -133,7 +140,7 @@ After pushing to the repository Github shows your commits as verified:
 
 ## Final words
 
-That's about it, your PGP passphrase should cache for a while so you shouldn't be bothered with entering your passphrase every single time you commit. You can configure your caching times here:
+That's about it, your passphrase should cache for a while so you shouldn't be bothered with entering your passphrase every single time you commit. You can configure your caching times here:
 
 ![gpg cache](http://i.imgur.com/TMT2T9t.png)
 
