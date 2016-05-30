@@ -87,6 +87,8 @@ uid       [ultimate] githubgpgtest <githubgpgtest@gmail.com>
 sub   4096R/63BEB3EE 2016-05-30
 ```
 
+**Notice**: I will be using `6B84CA35` as my identifier for my key, you should use your own in the upcoming commands.
+
 ## Adding your key to Github
 
 Follow [this](https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account) guide. In short:
