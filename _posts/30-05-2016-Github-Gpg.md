@@ -118,10 +118,15 @@ Add your key to your Github account through [this](https://github.com/settings/k
 
 ## Configuring Git
 
-To make Git work with GPG you should run the following commands:
+Set your globally installed GPG version in Git (make sure to alter this path if you installed `gpg2.exe` in a different location):
 
 ```
 git config --global gpg.program "C:/Program Files (x86)/GNU/GnuPG/gpg2.exe"
+```
+
+Then set your generated signing key:
+
+```
 git config --global user.signingkey 6B84CA35
 ```
 
