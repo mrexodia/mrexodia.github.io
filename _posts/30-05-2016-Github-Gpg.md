@@ -143,7 +143,7 @@ Now when commiting the Git Extensions it should show you the following dialog:
 
 After pushing to the repository Github shows your commits as verified:
 
-![verified](http://i.imgur.com/CtYYZ1I.png)
+![verified](http://i.imgur.com/LcZ9qIO.png)
 
 ## Final words
 
