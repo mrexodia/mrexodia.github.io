@@ -20,7 +20,7 @@ Technically the debug loop is part of [TitanEngine](https://bitbucket.org/titane
 
 A basic debug loop looks like this:
 
-![debug loop](/images/x64_dbg_debug_loop.png)
+![debug loop](/images/x64dbg_debug_loop.png)
 
 This is also how [TitanEngine's debug loop](https://bitbucket.org/titanengineupdate/titanengine-update/src/master/TitanEngine/TitanEngine.Debugger.DebugLoop.cpp) works. It handles events by calling so-called "Custom Handlers", which you can register by calling the `SetCustomHandler()` function. In addition to calling custom handlers TitanEngine does a lot of housekeeping (like storing information about the threads, modules and breakpoints). It also handles certain exceptions like `STATUS_SINGLE_STEP` for stepping and `STATUS_BREAKPOINT` for software breakpoints.
 
@@ -32,7 +32,7 @@ Because the `DebugLoop()` function of TitanEngine does not return until debuggin
 
 Here is a little image for the overview:
 
-![basic threading](/images/x64_dbg_basic_threads.png)
+![basic threading](/images/x64dbg_basic_threads.png)
 
 - A block represent a thread;
 - A dashed arrow represents starting a new thread;
