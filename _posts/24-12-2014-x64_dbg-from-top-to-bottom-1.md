@@ -16,13 +16,13 @@ Before you start reading this post, I recommend you read up on [Creating a Basic
 
 ## The debug loop
 
-Technically the debug loop is part of [TitanEngine](https://bitbucket.org/mrexodia/titanengine-update), not of x64dbg. The design of the debug loop, however is **very important** for x64dbg in general, so I will explain it here anyway.
+Technically the debug loop is part of [TitanEngine](https://bitbucket.org/titanengineupdate/titanengine-update), not of x64dbg. The design of the debug loop, however is **very important** for x64dbg in general, so I will explain it here anyway.
 
 A basic debug loop looks like this:
 
 ![debug loop](/images/x64_dbg_debug_loop.png)
 
-This is also how [TitanEngine's debug loop](https://bitbucket.org/mrexodia/titanengine-update/src/master/TitanEngine/TitanEngine.Debugger.DebugLoop.cpp) works. It handles events by calling so-called "Custom Handlers", which you can register by calling the `SetCustomHandler()` function. In addition to calling custom handlers TitanEngine does a lot of housekeeping (like storing information about the threads, modules and breakpoints). It also handles certain exceptions like `STATUS_SINGLE_STEP` for stepping and `STATUS_BREAKPOINT` for software breakpoints.
+This is also how [TitanEngine's debug loop](https://bitbucket.org/titanengineupdate/titanengine-update/src/master/TitanEngine/TitanEngine.Debugger.DebugLoop.cpp) works. It handles events by calling so-called "Custom Handlers", which you can register by calling the `SetCustomHandler()` function. In addition to calling custom handlers TitanEngine does a lot of housekeeping (like storing information about the threads, modules and breakpoints). It also handles certain exceptions like `STATUS_SINGLE_STEP` for stepping and `STATUS_BREAKPOINT` for software breakpoints.
 
 The **most important point** of these custom handlers is the fact that they are part of the debug loop, which means the debug loop won't continue until the custom handler returns.
 
