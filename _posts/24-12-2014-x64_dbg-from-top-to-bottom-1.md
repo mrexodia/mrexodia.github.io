@@ -1,7 +1,7 @@
 ---
 layout: post
 tagline: "The architecture of x64dbg..."
-category: x64dbg
+category: x64_dbg
 tags : [debugger, software, development, problems, code, documentation, architecture, windows, threads]
 ---
 {% include JB/setup %}
