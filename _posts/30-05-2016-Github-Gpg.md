@@ -145,7 +145,7 @@ After pushing to the repository Github shows your commits as verified:
 
 ![verified](http://i.imgur.com/LcZ9qIO.png)
 
-## Final words
+## Conclusion
 
 That's about it, your passphrase should cache for a while so you shouldn't be bothered with entering your passphrase every single time you commit. You can configure your caching times here:
 
