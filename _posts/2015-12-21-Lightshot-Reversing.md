@@ -91,4 +91,4 @@ That's all for now, I hope you enjoyed this post!
 
 Oh, quick update. This also works on the OS X version of Lightshot, however there you need to reboot in order to make the `/private/etc/hosts` file change work.
 
-Mr. eXoDia
+mrexodia

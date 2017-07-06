@@ -59,4 +59,4 @@ This summer I will try to work on x64dbg as much as I can, to at least complete 
 
 Till next time,
 
-Mr. eXoDia
+mrexodia

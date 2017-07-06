@@ -104,4 +104,4 @@ Alright, that was about it! I plan on improving this algorithm to support weird 
 
 Greetings,
 
-Mr. eXoDia
+mrexodia

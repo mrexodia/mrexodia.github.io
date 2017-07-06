@@ -53,4 +53,4 @@ To provide thread-safe access to certain global variables (like breakpoint/comme
 
 That's all for now, I hope you enjoyed reading this and I will continue to cover various aspects of x64dbg, from the bigger picture, to small interesting details.
 
-Mr. eXoDia
+mrexodia
