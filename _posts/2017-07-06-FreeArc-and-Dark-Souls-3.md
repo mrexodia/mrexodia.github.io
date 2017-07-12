@@ -4,6 +4,7 @@ tagline: "We all eat RAM when our disks are full..."
 category: coding
 tags : [Windows, InnoSetup, unarc, dll, FreeArcExtract, FreeArc]
 ---
+{% include JB/setup %}
 
 In my free time I work on lots of small projects. One of those is called [DarkSouls3.TextViewer](https://github.com/mrexodia/DarkSouls3.TextViewer) and it lets you view all dialogue and item descriptions in [Dark Souls 3](https://www.darksouls3.com):
 
