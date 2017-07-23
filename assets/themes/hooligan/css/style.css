@@ -78,6 +78,18 @@ pre > code {
   -o-box-shadow: none;
 }
 
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  overflow: auto !important;
+  width: 100% !important;
+}
+
 /* line 74, ../_sass/_base.scss */
 hr {
   border: none;
