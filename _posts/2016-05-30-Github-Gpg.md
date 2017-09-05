@@ -114,7 +114,7 @@ mQINBFdMlawBEADUmBNVR8psLgeBQ1hz2N7VjVmiPiwbgpIK9VAToLX8BYl2ZPYB
 
 Add your key to your Github account through [this](https://github.com/settings/keys) page:
 
-![github screenshot](http://i.imgur.com/1C6SKwz.png) 
+![github screenshot](https://i.imgur.com/1C6SKwz.png) 
 
 ## Configuring Git
 
@@ -139,17 +139,17 @@ git config --global tag.gpgsign true
 
 Now when commiting the Git Extensions it should show you the following dialog:
 
-![gpg password](http://i.imgur.com/3VdRMSg.png)
+![gpg password](https://i.imgur.com/3VdRMSg.png)
 
 After pushing to the repository Github shows your commits as verified:
 
-![verified](http://i.imgur.com/LcZ9qIO.png)
+![verified](https://i.imgur.com/LcZ9qIO.png)
 
 ## Conclusion
 
 That's about it, your passphrase should cache for a while so you shouldn't be bothered with entering your passphrase every single time you commit. You can configure your caching times here:
 
-![gpg cache](http://i.imgur.com/TMT2T9t.png)
+![gpg cache](https://i.imgur.com/TMT2T9t.png)
 
 The first entry is the `default-cache-ttl` option, the second `max-cache-ttl`:
 
