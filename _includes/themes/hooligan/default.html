@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <title>
-      {% if page.title %}
-        {{ page.title }} - 
-      {% endif %}{{ site.title }}
-    </title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="{{ site.description }}">
+
+    <!-- Open Graph (http://ogp.me) -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mrexodia.cf{{ page.url }}" />
+    <meta property="og:image" content="https://mrexodia.cf/qr.png" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
     <!-- HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
