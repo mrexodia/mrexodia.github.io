@@ -4,60 +4,60 @@ https://keybase.io/mrexodia
 
 I hereby claim:
 
-  * I am an admin of http://mrexodia.cf
+  * I am an admin of https://mrexodia.github.io
   * I am mrexodia (https://keybase.io/mrexodia) on keybase.
   * I have a public key with fingerprint 1BDC 76FE D9F3 8854 2ACA  7E89 0834 E000 49E2 9CD0
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "01018535d13a1dc1de525fc7585103df3b6004814ebc8776321957ed5efd0709fa250a",
-            "fingerprint": "1bdc76fed9f388542aca7e890834e00049e29cd0",
-            "host": "keybase.io",
-            "key_id": "0834e00049e29cd0",
-            "kid": "01018535d13a1dc1de525fc7585103df3b6004814ebc8776321957ed5efd0709fa250a",
-            "uid": "ab93b76eafe8f8619a1d5298f690c419",
-            "username": "mrexodia"
-        },
-        "service": {
-            "hostname": "mrexodia.cf",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "01018535d13a1dc1de525fc7585103df3b6004814ebc8776321957ed5efd0709fa250a",
+      "fingerprint": "1bdc76fed9f388542aca7e890834e00049e29cd0",
+      "host": "keybase.io",
+      "key_id": "0834e00049e29cd0",
+      "kid": "01018535d13a1dc1de525fc7585103df3b6004814ebc8776321957ed5efd0709fa250a",
+      "uid": "ab93b76eafe8f8619a1d5298f690c419",
+      "username": "mrexodia"
     },
-    "ctime": 1470983152,
-    "expire_in": 157680000,
-    "prev": "c50a62a12a51ed26f5a1266b306c1b4600fd6390d1e7745b7ff961c43b605695",
-    "seqno": 6,
-    "tag": "signature"
+    "service": {
+      "hostname": "mrexodia.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1548008971,
+  "expire_in": 157680000,
+  "prev": "96c7622228d2c6240ca320b5b2a99e4a26c6c709afbc5ee0465920f04c713bca",
+  "seqno": 27,
+  "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.55
+Version: Keybase OpenPGP v2.0.80
 Comment: https://keybase.io/crypto
 
-yMIoAnicrZJbSBRRHMZnrdZWEoPKCPVloIdkizkzc87MbEEsGRVRxmq0lbnMzDmj
-0+rONruru26bdEeIiC5CKRG9hIZF0WVTCovuF8x8McU0KOqly0NFhGlnurzUa09z
-5pzv+53v/3Fu509h8lzjLWOdp252Droe3TyWYDZ0hT+mWc3CKdaXZsPk54fUYRKL
-h8ImZn0sBzggQwFiIKgA6wATyENDl6AMASdgQ9AQx4kyEImmy5KEBB4oUCIYEgNz
-EqcYKg85lfWyhhmpIXbUNiNxigUa1iVkEKwYgixDkVd1VSKywsmCSDhKVAiv6Jij
-xlor5jhoOE2NkUWmRffoT+hXvH/1/zl34idO1RRBkxBRDSIbMgIKhUJekQ2kcLoI
-FEcYI3ZErSdUXW+TpIVNlc14WbrbYOrEKdaZ5C/FIt2g1qhtxS3dqqMHtfF41Of4
-4qmoI2wkWug3IqSZEUxbpIYGYsdMK8L6AFXqcdNhApHGlgUAeS9LklHTJiHTUUAJ
-ybQhzrmGNFCkTgdDvAp4FQKCeWRAukZIEzikA02kvRgYCQqHAZEkEWqSYSgI6KJT
-GUQKZJ2htkUs1odoTLWGImNmTUSNJ2zCZm71Vk1lXHmMe1qO87qYPM/MP2/ucGfu
-99lH3zXNOrulbe3Hnv3Z5Tv8C8d798TmD9b3pSt3fViw0VP6pTG/6vStib7q1TlM
-66qqQyu7+pYwV4qalz0uW9q1xiw/OKOwoHlBMDCa3rrq/oqOB9f9Z9o/jS2+1NSx
-Uw6i7MjQY7Bv3V7+bkn/0LQ52xdP7B4r/Fxb8HJ4+OS5ve7Kp+XBz6nvA1sOpt/6
-K268bp1RvO3liLsxmL1HMnNzXYHbow/fJ8J337zo6Jk4caTSZC4Pl73h5jV5+gPe
-TcVr77zKDJHS6msLv+GNzetvHK+omKzudgfPa8mTJZPTP61J7MjdvH3giaeuqLu9
-5eLzr1lm5dXeomTqwLPAeNK/uq31wg+tHUSq
-=xEa4
+yMIqAnicrZJbSBRRGMfXLlJrNyvpQlAMRS+2nrmcmTljLEILIXTFFkKXlnNmzuwO
+5c46O7u6mUEEZWFRCd1v9lJaWSzRg6il7YOg3ZCoIMp6CCoiisCosM5kvdRr5+Vw
+vvP//873fefLT5/o8xd83zfScb6v40nBYN/ZtC8S6i1q5IhtZDmtkdtKf210m0FT
+bnSrZXAaB3jAq1CEBi9i3tB5g0IBmroCVcgD0TBFIgMgqbxEia4qiiwKPIIKNSA1
+DaAAZGIBAsyVcqaViFEn6VgJl2F5YuiKbFIDmaKqQknAOlaoioAqShQwIqIC0g3A
+jHE75TlYcgSnaMCyWYwdouPp/av/z3mnf+EwQSJRZIpNqpqqzCMGhQJSTRkBXeKR
+J0xRJ4FrKVPXOrTBNizMNZVyLJqxdOo11qvkL0UgZrnxNBmvKunYrq3b29h93HWT
+Kc3zu9mkZ6inJPobFSVWwmDdZI4MdVKWneA0nil11/LYPJRUAFSk8KUcbUhaDo1a
+ngIqMosD4L1DMwyJZPYFAluqIeiyIAEdiwIgkAgYISphQdaZAiBsEh1SCiQZIgGY
+QNIVXiS615wUrUvYnCYoLE8cY8yUFUtgN+1Qrqn/dmSSr8DvK5w8wRszn3/qrD/D
+dzY2xfdgQdnVIxtP3pwjnnt/b9r1slBww5hbz9XN3qSlRw/eaH997Ub7SMDsKV/V
+uTn5KjKrl2twg+U7BsilwPKaiVy4cPjYzBqzK/bJ6g8r5UOZB91XOi837pn7LPJh
+e/2J3spFc+59u7taLdaWBfPN4WPr2kKj8GX1iuFdtUfXOskfud3dObKuJxNeetnt
+7M9OUBY87174dP3bgfD8L1vOLHnTtausZUZF12D+0ptTFS2tj4oP7rzf9uiQ+jDS
+JIh2/nHFyou3Su5o80IHPlUt93+8UHn6xdPQyDPsG4ufaq0KHt6bPU6HWmeeGN6/
+ZvLex9d7crON5q+VRdUlHbl8efu7z4t/AvfORFs=
+=DJJN
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
