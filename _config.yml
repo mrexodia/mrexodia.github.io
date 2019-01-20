@@ -27,7 +27,7 @@ kramdown:
   input: GFM
   hard_wrap: false # github default (test this)
 
-gems:
+plugins:
   - jekyll-paginate
 
 # The production_url is only used when full-domain names are needed
@@ -38,7 +38,7 @@ gems:
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : mrexodia
+production_url : https://mrexodia.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
