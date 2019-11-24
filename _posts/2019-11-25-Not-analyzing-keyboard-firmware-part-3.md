@@ -14,7 +14,7 @@ The solution I came up with is based on [AutoHotkey](https://www.autohotkey.com/
 
 After a while of thinking and experimenting I came up with the following key map (thanks to [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/). Green is the macro layer, the rest is just for reference:
 
-![macro layer](https://i.imgur.com/i66YAW2.png)
+![macro layer](https://i.imgur.com/udcwq2u.png)
 
 Initially I just had the arrows + home/end, but while doing some actual programming work I came up with a bunch of other useful things. For example `Caps+G(it)` is bound to `F13`, which I linked in Visual Studio to start my [GitExtBar](https://github.com/mrexodia/FunUtils#gitextbar) utility:
 
