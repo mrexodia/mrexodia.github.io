@@ -1,0 +1,138 @@
+<!--
+MIT License
+
+Copyright (c) 2021 Duncan Ogilvie
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html>
+  <head>
+    <!-- Nicer embeds -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IDA Type Converter" />
+    <meta property="og:description" content="Simple utility to convert function type declarations to an IDA-friendly format." />
+    <meta property="og:url" content="https://mrexodia.github.io/typeconverter.html" />
+
+    <title>IDA Type Converter</title>
+    <link
+      rel="shortcut icon"
+      href="https://mrexodia.github.io/images/favicon.ico"
+    />
+    <script>
+      function convertType() {
+        var input = document.getElementById("input").value;
+
+        // TODO: add generic detection for sal.h (_Capital_)
+        // TODO: support SAL with arguments
+        // TODO: block comments need a parser with state
+        var output = input
+          .replaceAll(/\bNTSYSAPI\b/g, "")
+          .replaceAll(/\bWINBASEAPI\b/g, "")
+          .replaceAll(/\bNTAPI\b/g, "__cdecl")
+          .replaceAll(/\bWINAPI\b/g, "__stdcall")
+          .replaceAll(/\bIN\b/g, "")
+          .replaceAll(/\bOUT\b/g, "")
+          .replaceAll(/\bOPTIONAL\b/g, "")
+          .replaceAll(/\b_In_\b/g, "")
+          .replaceAll(/\b_In_opt_\b/g, "")
+          .replaceAll(/\b_Out_\b/g, "")
+          .replaceAll(/\b_Out_opt_\b/g, "")
+          .replaceAll(/\b_Inout_\b/g, "")
+          .replaceAll(/\b_Ret_maybenull_\b/g, "")
+          .replaceAll(/\b_Outptr_\b/g, "")
+          .replaceAll("[in]", "")
+          .replaceAll("[out]", "")
+          .replaceAll("[in, out]", "")
+          .replaceAll("[in, optional]", "")
+          .replaceAll("[out, optional]", "")
+          .replaceAll("[in, out, optional]", "")
+          .replaceAll(/\/\/[^\n]+/g, "") // line comment
+          .replaceAll(/\/\*(.+)\*\//g, "") // block comment (single line only)
+          .replaceAll(/\s+/g, " ") // remove whitespace
+          .replaceAll(" ,", ",")
+          .replace("( ", "(")
+          .replace(" )", ")")
+          .trim();
+
+        var outputElement = document.getElementById("output");
+        outputElement.value = output;
+        outputElement.focus();
+        outputElement.select();
+        document.execCommand("copy");
+
+        let meme = document.getElementById("meme");
+        meme.removeAttribute("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>IDA Type Converter</h1>
+    <p>
+      Simple utility to convert function type declarations from
+      <a
+        href="https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-zwduplicateobject"
+        >MSDN</a
+      >
+      or
+      <a
+        href="http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FType%20independed%2FNtDuplicateObject.html"
+        >other</a
+      >
+      <a href="http://www.codewarrior.cn/ntdoc/winxp/ob/NtDuplicateObject.htm"
+        >sites</a
+      >
+      to a format compatible with
+      <a href="https://hex-rays.com/ida-pro/">IDA Pro</a>.
+    </p>
+    <p>
+      If you like this, consider supporting me on
+      <a href="https://github.com/sponsors/mrexodia">GitHub Sponsors</a>. Pull
+      requests
+      <a
+        href="https://github.com/mrexodia/mrexodia.github.io/blob/master/typeconverter.html"
+        >here</a
+      >.
+    </p>
+    <p>
+      <textarea id="input" rows="20" cols="100">
+NTSYSAPI NTSTATUS ZwMapViewOfSection(
+  [in]                HANDLE          SectionHandle,
+  [in]                HANDLE          ProcessHandle,
+  [in, out]           PVOID           *BaseAddress,
+  [in]                ULONG_PTR       ZeroBits,
+  [in]                SIZE_T          CommitSize,
+  [in, out, optional] PLARGE_INTEGER  SectionOffset,
+  [in, out]           PSIZE_T         ViewSize,
+  [in]                SECTION_INHERIT InheritDisposition,
+  [in]                ULONG           AllocationType,
+  [in]                ULONG           Win32Protect
+);</textarea
+      >
+    </p>
+    <p>
+      <button onclick="convertType()">Convert &amp; Copy</button>
+    </p>
+    <p>
+      <textarea readonly id="output" rows="5" cols="100"></textarea>
+    </p>
+    <sub id="meme" hidden
+      >Hail <a href="https://ghidra-sre.org/">Ghidra!</a></sub
+    >
+  </body>
+</html>
