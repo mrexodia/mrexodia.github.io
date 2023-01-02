@@ -26,8 +26,19 @@ SOFTWARE.
     <!-- Nicer embeds -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="IDA Type Converter" />
-    <meta property="og:description" content="Simple utility to convert function type declarations to an IDA-friendly format." />
-    <meta property="og:url" content="https://mrexodia.github.io/typeconverter.html" />
+    <meta
+      property="og:description"
+      content="Simple utility to convert function type declarations to an IDA-friendly format."
+    />
+    <meta
+      property="og:url"
+      content="https://mrexodia.github.io/typeconverter.html"
+    />
+
+    <meta
+      name="description"
+      content="Simple utility to convert function type declarations to an IDA-friendly format."
+    />
 
     <title>IDA Type Converter</title>
     <link
@@ -45,6 +56,7 @@ SOFTWARE.
           .replaceAll(/\bNTSYSAPI\b/g, "")
           .replaceAll(/\bWINBASEAPI\b/g, "")
           .replaceAll(/\bNTAPI\b/g, "__cdecl")
+          .replaceAll(/\bEFIAPI\b/g, "__cdecl")
           .replaceAll(/\bWINAPI\b/g, "__stdcall")
           .replaceAll(/\bIN\b/g, "")
           .replaceAll(/\bOUT\b/g, "")
